@@ -1,0 +1,13 @@
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\BrowsersBenchmark.exe.config
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\BrowsersBenchmark.exe
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\BrowsersBenchmark.pdb
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\WebDriver.dll
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\WebDriver.Support.dll
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\WebDriver.xml
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\bin\Debug\WebDriver.Support.xml
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\obj\Debug\BrowsersBenchmark.csprojResolveAssemblyReference.cache
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\obj\Debug\BrowsersBenchmark.Form1.resources
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\obj\Debug\BrowsersBenchmark.Properties.Resources.resources
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\obj\Debug\BrowsersBenchmark.csproj.GenerateResource.Cache
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\obj\Debug\BrowsersBenchmark.exe
+C:\Users\przem\onedrive\dokumenty\visual studio 2017\Projects\BrowsersBenchmark\BrowsersBenchmark\obj\Debug\BrowsersBenchmark.pdb
