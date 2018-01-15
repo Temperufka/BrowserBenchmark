@@ -15,12 +15,12 @@ using System.Windows.Forms;
 
 namespace BrowsersBenchmark
 {
-    
+
     public partial class Form1 : Form
     {
         private string url;
         private string loadPageTime;
-        
+
 
         public Form1()
         {
@@ -33,18 +33,12 @@ namespace BrowsersBenchmark
             try
             {
                 IWebDriver driver = _driver;
-                driver.Url = url;
+                var tests = new Tests(driver);
+                tests.GifTest();
 
-                var initLoadPageTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
-                driver.Manage().Window.Maximize();
-                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10); 
+                driver.Close();
 
-                var endLoadPageTime = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
-
-                var pageLoadTime = (endLoadPageTime - initLoadPageTime);
-                loadPageTime = pageLoadTime.ToString();
-                LoadingPageLabel.Text = loadPageTime + " ms";
             }
             catch (Exception ex)
             {
@@ -60,12 +54,12 @@ namespace BrowsersBenchmark
 
 
         private void FirefoxButton_Click(object sender, EventArgs e)
-        { 
+        {
             IWebDriver driver = new FirefoxDriver();
             OpenBrowser(driver);
         }
 
-      
+
         private void ChromeButton_Click(object sender, EventArgs e)
         {
             IWebDriver driver = new ChromeDriver();
@@ -74,7 +68,7 @@ namespace BrowsersBenchmark
 
         private void ExplorerButton_Click(object sender, EventArgs e)
         {
-            IWebDriver driver = new InternetExplorerDriver();
+            IWebDriver driver = new InternetExplorerDriver(new InternetExplorerOptions() { IgnoreZoomLevel = true });
             OpenBrowser(driver);
         }
 
