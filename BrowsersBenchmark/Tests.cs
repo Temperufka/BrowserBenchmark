@@ -24,7 +24,7 @@ namespace BrowsersBenchmark
             var navigationStart = WebTimeService.PageLoadTime(_webDriver);
 
             MessageBox.Show(navigationStart.ToString());
-
+            
         }
 
         public void GifTest()
@@ -35,6 +35,33 @@ namespace BrowsersBenchmark
 
             MessageBox.Show(navigationStart.ToString());
 
+        }
+
+        public void LocalGameTest()
+        {
+            _webDriver.Navigate().GoToUrl(@"D:\selenium projekt\BrowserBenchmark\BrowsersBenchmark\Resources\Game.html");
+
+            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+
+            MessageBox.Show(navigationStart.ToString());
+        }
+
+        public void OuterGameTest()
+        {
+            _webDriver.Navigate().GoToUrl(@"http://ozogames.com/webgl-3d-games/endless-truck-online-game.html");
+
+            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+
+            MessageBox.Show(navigationStart.ToString());
+        }
+
+        public void ThreeDimensionsModel()
+        {
+            _webDriver.Navigate().GoToUrl(@"D:\selenium projekt\BrowserBenchmark\BrowsersBenchmark\Resources\Sketchfab.html");
+
+            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+
+            MessageBox.Show(navigationStart.ToString());
         }
 
     }
