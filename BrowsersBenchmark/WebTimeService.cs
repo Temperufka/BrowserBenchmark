@@ -25,5 +25,36 @@ namespace BrowsersBenchmark
                 return pageLoadTime");
         }
 
+        public static object DomRendering(IWebDriver driver)
+        {
+            return ((IJavaScriptExecutor)driver).ExecuteScript(
+                @"var perfData = window.performance.timing; 
+                var pageLoadTime = perfData.domLoading - perfData.domComplete;   
+                return pageLoadTime");
+        }
+
+        public static object RequestTime(IWebDriver driver)
+        {
+            return ((IJavaScriptExecutor)driver).ExecuteScript(
+                @"var perfData = window.performance.timing; 
+                var pageLoadTime =   perfData.responseStart - perfData.requestStart;   
+                return pageLoadTime");
+        }
+
+        public static object ResponseTime(IWebDriver driver)
+        {
+            return ((IJavaScriptExecutor)driver).ExecuteScript(
+                @"var perfData = window.performance.timing; 
+                var pageLoadTime =  perfData.responseEnd - perfData.responseStart ;   
+                return pageLoadTime");
+        }
+
+        public static object WholeRequestTime(IWebDriver driver)
+        {
+            return ((IJavaScriptExecutor)driver).ExecuteScript(
+                @"var perfData = window.performance.timing; 
+                var pageLoadTime =  perfData.responseEnd - perfData.requestStart ;   
+                return pageLoadTime");
+        }
     }
 }

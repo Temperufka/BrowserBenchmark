@@ -21,20 +21,18 @@ namespace BrowsersBenchmark
         {
             _webDriver.Navigate().GoToUrl(@"D:\selenium projekt\BrowserBenchmark\BrowsersBenchmark\Resources\LargePhoto.html");
 
-            var navigationStart = WebTimeService.PageLoadTime(_webDriver);
+            var navigationStart = WebTimeService.WholeRequestTime(_webDriver);
 
             MessageBox.Show(navigationStart.ToString());
-            
         }
 
         public void GifTest()
         {
             _webDriver.Navigate().GoToUrl(@"D:\selenium projekt\BrowserBenchmark\BrowsersBenchmark\Resources\3DGif.html");
 
-            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            var navigationStart = WebTimeService.WholeRequestTime(_webDriver);
 
             MessageBox.Show(navigationStart.ToString());
-
         }
 
         public void LocalGameTest()

@@ -34,11 +34,9 @@ namespace BrowsersBenchmark
             {
                 IWebDriver driver = _driver;
                 var tests = new Tests(driver);
-                tests.GifTest();
-
+                tests.LargePhotoTest();
 
                 driver.Close();
-
             }
             catch (Exception ex)
             {
