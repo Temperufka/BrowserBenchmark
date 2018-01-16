@@ -90,7 +90,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\3DGif.html" />
+    <Content Include="Resources\Game.html" />
+    <Content Include="Resources\InverseSorting.html" />
     <Content Include="Resources\LargePhoto.html" />
+    <Content Include="Resources\Sketchfab.html" />
+    <Content Include="Resources\Sorting.js" />
+    <Content Include="Resources\TemplateData\favicon.ico" />
+    <Content Include="Resources\TemplateData\fullscreen.png" />
+    <Content Include="Resources\TemplateData\progressEmpty.Dark.png" />
+    <Content Include="Resources\TemplateData\progressEmpty.Light.png" />
+    <Content Include="Resources\TemplateData\progressFull.Dark.png" />
+    <Content Include="Resources\TemplateData\progressFull.Light.png" />
+    <Content Include="Resources\TemplateData\progressLogo.Dark.png" />
+    <Content Include="Resources\TemplateData\progressLogo.Light.png" />
+    <Content Include="Resources\TemplateData\style.css" />
+    <Content Include="Resources\TemplateData\UnityProgress.js" />
+    <Content Include="Resources\TemplateData\webgl-logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.Firefox.WebDriver.0.19.1\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.19.1\build\Selenium.Firefox.WebDriver.targets')" />
