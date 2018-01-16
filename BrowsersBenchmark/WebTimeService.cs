@@ -26,7 +26,7 @@ namespace BrowsersBenchmark
                 return pageLoadTime");
         }
 
-        public static object DomRendering(IWebDriver driver)
+        public static object DomRenderingTime(IWebDriver driver)
         {
             return ((IJavaScriptExecutor)driver).ExecuteScript(
                 @"var perfData = window.performance || {};

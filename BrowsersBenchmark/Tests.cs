@@ -23,18 +23,24 @@ namespace BrowsersBenchmark
         {
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/LargePhoto.html");
 
-            var navigationStart = WebTimeService.WholeRequestTime(_webDriver);
-
-            MessageBox.Show(navigationStart.ToString());
+            var navigationStart = WebTimeService.NavigationStart(_webDriver); 
+            var requestTime = WebTimeService.RequestTime(_webDriver);
+            var responseTime = WebTimeService.ResponseTime(_webDriver); 
+            var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
+            var domRenderingTime = WebTimeService.DomRenderingTime(_webDriver);
+            var pageLoadTime = WebTimeService.PageLoadTime(_webDriver);
         }
 
         public void GifTest()
         {
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/3DGif.html");
 
-            var navigationStart = WebTimeService.DomRendering(_webDriver);
-
-            MessageBox.Show(navigationStart.ToString());
+            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            var requestTime = WebTimeService.RequestTime(_webDriver);
+            var responseTime = WebTimeService.ResponseTime(_webDriver);
+            var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
+            var domRenderingTime = WebTimeService.DomRenderingTime(_webDriver);
+            var pageLoadTime = WebTimeService.PageLoadTime(_webDriver);
         }
 
         public void LocalGameTest()
@@ -42,8 +48,11 @@ namespace BrowsersBenchmark
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/Game.html");
 
             var navigationStart = WebTimeService.NavigationStart(_webDriver);
-
-            MessageBox.Show(navigationStart.ToString());
+            var requestTime = WebTimeService.RequestTime(_webDriver);
+            var responseTime = WebTimeService.ResponseTime(_webDriver);
+            var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
+            var domRenderingTime = WebTimeService.DomRenderingTime(_webDriver);
+            var pageLoadTime = WebTimeService.PageLoadTime(_webDriver);
         }
 
         public void OuterGameTest()
@@ -51,8 +60,11 @@ namespace BrowsersBenchmark
             _webDriver.Navigate().GoToUrl(@"http://ozogames.com/webgl-3d-games/endless-truck-online-game.html");
 
             var navigationStart = WebTimeService.NavigationStart(_webDriver);
-
-            MessageBox.Show(navigationStart.ToString());
+            var requestTime = WebTimeService.RequestTime(_webDriver);
+            var responseTime = WebTimeService.ResponseTime(_webDriver);
+            var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
+            var domRenderingTime = WebTimeService.DomRenderingTime(_webDriver);
+            var pageLoadTime = WebTimeService.PageLoadTime(_webDriver);
         }
 
         public void ThreeDimensionsModel()
@@ -60,8 +72,11 @@ namespace BrowsersBenchmark
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/Sketchfab.html");
 
             var navigationStart = WebTimeService.NavigationStart(_webDriver);
-
-            MessageBox.Show(navigationStart.ToString());
+            var requestTime = WebTimeService.RequestTime(_webDriver);
+            var responseTime = WebTimeService.ResponseTime(_webDriver);
+            var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
+            var domRenderingTime = WebTimeService.DomRenderingTime(_webDriver);
+            var pageLoadTime = WebTimeService.PageLoadTime(_webDriver);
         }
 
         public void InsertionSortTest()
