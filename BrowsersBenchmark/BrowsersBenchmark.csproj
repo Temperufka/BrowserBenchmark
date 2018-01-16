@@ -91,7 +91,6 @@
   <ItemGroup>
     <Content Include="Resources\3DGif.html" />
     <Content Include="Resources\Game.html" />
-    <Content Include="Resources\InverseSorting.html" />
     <Content Include="Resources\LargePhoto.html" />
     <Content Include="Resources\Sketchfab.html" />
     <Content Include="Resources\Sorting.js" />

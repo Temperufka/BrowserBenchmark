@@ -35,7 +35,12 @@ namespace BrowsersBenchmark
             {
                 IWebDriver driver = _driver;
                 var tests = new Tests(driver);
+                tests.LargePhotoTest();
                 tests.GifTest();
+                tests.LocalGameTest();
+                tests.OuterGameTest();
+                tests.ThreeDimensionsModel();
+                tests.InsertionSortTest();
 
                 driver.Close();
             }

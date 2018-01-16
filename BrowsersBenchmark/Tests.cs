@@ -87,10 +87,6 @@ namespace BrowsersBenchmark
             stopWatch.Start();
             ((IJavaScriptExecutor)_webDriver).ExecuteScript(script);
             stopWatch.Stop();
-
-            var time = stopWatch.ElapsedMilliseconds;
-
-            MessageBox.Show(time.ToString());
         }
     }
 }
