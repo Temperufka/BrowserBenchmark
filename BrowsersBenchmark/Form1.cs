@@ -29,16 +29,16 @@ namespace BrowsersBenchmark
         }
 
 
-        public void OpenBrowser(IWebDriver _driver)
+        public void OpenBrowser(IWebDriver _driver, string browserName)
         {
             try
             {
                 IWebDriver driver = _driver;
-                var tests = new Tests(driver);
+                var tests = new Tests(driver, browserName);
                 tests.LargePhotoTest();
                 tests.GifTest();
                 tests.LocalGameTest();
-                tests.OuterGameTest();
+                //tests.OuterGameTest();
                 tests.ThreeDimensionsModel();
                 tests.InsertionSortTest();
 
@@ -64,7 +64,7 @@ namespace BrowsersBenchmark
             IWebDriver driver = new FirefoxDriver(options);
             driver.Manage().Cookies.DeleteAllCookies();
 
-            OpenBrowser(driver);
+            OpenBrowser(driver,"Firefox");
         }
 
         private void ChromeButton_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace BrowsersBenchmark
             options.AddArgument("incognito");
             IWebDriver driver = new ChromeDriver(options);
             driver.Manage().Cookies.DeleteAllCookies();
-            OpenBrowser(driver);
+            OpenBrowser(driver,"Chrome");
         }
 
         private void ExplorerButton_Click(object sender, EventArgs e)
@@ -89,7 +89,7 @@ namespace BrowsersBenchmark
             IWebDriver driver = new InternetExplorerDriver(options);
             driver.Manage().Cookies.DeleteAllCookies();
 
-            OpenBrowser(driver);
+            OpenBrowser(driver,"InternetExplorer");
         }
 
         private void EdgeButton_Click(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace BrowsersBenchmark
             IWebDriver driver = new EdgeDriver();
             driver.Manage().Cookies.DeleteAllCookies();
 
-            OpenBrowser(driver);
+            OpenBrowser(driver,"Edge");
         }
     }
 }
