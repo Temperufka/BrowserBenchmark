@@ -30,9 +30,15 @@ namespace BrowsersBenchmark
         {
             var fileName = "LargePhotoTest.csv";
 
+            DateTime unix = new DateTime(1970, 1, 1);
+            var unixTimestamp = DateTime.UtcNow;
+
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/LargePhoto.html");
 
-            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            var navigationTimeStamp = (long)WebTimeService.NavigationStart(_webDriver);
+            var navigationDateTime = unix.AddMilliseconds(navigationTimeStamp);
+
+            var navigationStart = (navigationDateTime - unixTimestamp).TotalMilliseconds;
             var requestTime = WebTimeService.RequestTime(_webDriver);
             var responseTime = WebTimeService.ResponseTime(_webDriver);
             var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
@@ -48,9 +54,15 @@ namespace BrowsersBenchmark
         {
             var fileName = "GifTest.csv";
 
+            DateTime unix = new DateTime(1970, 1, 1);
+            var unixTimestamp = DateTime.UtcNow;
+
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/3DGif.html");
 
-            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            var navigationTimeStamp = (long)WebTimeService.NavigationStart(_webDriver);
+            var navigationDateTime = unix.AddMilliseconds(navigationTimeStamp);
+       
+            var navigationStart = (navigationDateTime - unixTimestamp).TotalMilliseconds;
             var requestTime = WebTimeService.RequestTime(_webDriver);
             var responseTime = WebTimeService.ResponseTime(_webDriver);
             var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
@@ -65,9 +77,16 @@ namespace BrowsersBenchmark
         public void LocalGameTest()
         {
             var fileName = "LocalGameTest.csv";
+
+            DateTime unix = new DateTime(1970, 1, 1);
+            var unixTimestamp = DateTime.UtcNow;
+
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/Game.html");
 
-            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            var navigationTimeStamp = (long)WebTimeService.NavigationStart(_webDriver);
+            var navigationDateTime = unix.AddMilliseconds(navigationTimeStamp);
+
+            var navigationStart = (navigationDateTime - unixTimestamp).TotalMilliseconds;
             var requestTime = WebTimeService.RequestTime(_webDriver);
             var responseTime = WebTimeService.ResponseTime(_webDriver);
             var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
@@ -79,12 +98,19 @@ namespace BrowsersBenchmark
             AddToFile(fileName, content);
         }
 
-        public void OuterGameTest()
+        public void ExternalWebSiteTest()
         {
-            var fileName = "OuterGameTest.csv";
-            _webDriver.Navigate().GoToUrl(@"http://ozogames.com/webgl-3d-games/endless-truck-online-game.html");
+            var fileName = "ExternalWebSiteTest.csv";
 
-            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            DateTime unix = new DateTime(1970, 1, 1);
+            var unixTimestamp = DateTime.UtcNow;
+
+            _webDriver.Navigate().GoToUrl(@"https://www.onet.pl/");
+            
+            var navigationTimeStamp = (long)WebTimeService.NavigationStart(_webDriver);
+            var navigationDateTime = unix.AddMilliseconds(navigationTimeStamp);
+
+            var navigationStart = (navigationDateTime - unixTimestamp).TotalMilliseconds;
             var requestTime = WebTimeService.RequestTime(_webDriver);
             var responseTime = WebTimeService.ResponseTime(_webDriver);
             var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);
@@ -99,9 +125,16 @@ namespace BrowsersBenchmark
         public void ThreeDimensionsModel()
         {
             var fileName = "ThreeDimensionsModel.csv";
+
+            DateTime unix = new DateTime(1970, 1, 1);
+            var unixTimestamp = DateTime.UtcNow;
+
             _webDriver.Navigate().GoToUrl("file:///D:/selenium%20projekt/BrowserBenchmark/BrowsersBenchmark/Resources/Sketchfab.html");
 
-            var navigationStart = WebTimeService.NavigationStart(_webDriver);
+            var navigationTimeStamp = (long)WebTimeService.NavigationStart(_webDriver);
+            var navigationDateTime = unix.AddMilliseconds(navigationTimeStamp);
+
+            var navigationStart = (navigationDateTime - unixTimestamp).TotalMilliseconds;
             var requestTime = WebTimeService.RequestTime(_webDriver);
             var responseTime = WebTimeService.ResponseTime(_webDriver);
             var wholeRequestTime = WebTimeService.WholeRequestTime(_webDriver);

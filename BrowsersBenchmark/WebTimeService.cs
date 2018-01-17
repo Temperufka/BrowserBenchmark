@@ -14,8 +14,8 @@ namespace BrowsersBenchmark
             return ((IJavaScriptExecutor)driver).ExecuteScript(
                @"var now = new Date().getTime();
                 var performance = window.performance || {};
-                var page_load_time = now - performance.timing.navigationStart;    
-                return page_load_time");
+                var navigationStarts = performance.timing.navigationStart;    
+                return navigationStarts");
         }
 
         public static object PageLoadTime(IWebDriver driver)
